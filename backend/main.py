@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from database.crud import get_all_events, get_event_by_id, get_filtered_events
+from database.init_db import init_db
+from services.logger import test_logger
 from auth.auth_crud import get_user_by_username
 from auth.security import verify_password, create_access_token
 from auth.dependencies import get_current_user
